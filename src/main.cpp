@@ -9,13 +9,9 @@ void setup() {
 
 void loop() {
   delay(delay1);
-  ledstate &= 0b11001111; // BITWISE AND - change bit 5 and 4 to 0 - leave
-                          // others unchanged
-  PORTB =
-      (ledstate |= 0b00100000); // BITWISE OR - change bit 5 to 1 - leave others unchanged
+  ledstate &= 0b11001111; // BITWISE AND - change bit 5 and 4 to 0 - leave others unchanged
+  PORTB = (ledstate |= 0b00100000); // BITWISE OR - change bit 5 to 1 - leave others unchanged
   delay(delay2);
-  ledstate &= 0b11001111; // BITWISE AND - change bit 5 and 4 to 0 - leave
-                          // others unchanged
-  PORTB =
-      (ledstate |= 0b00010000); // BITWISE OR - change bit 4 to 1 - leave others unchanged
+  ledstate &= 0b11001111; // BITWISE AND - change bit 5 and 4 to 0 - leave others unchanged
+  PORTB = (ledstate |= 0b00010000); // BITWISE OR - change bit 4 to 1 - leave others unchanged
 }
